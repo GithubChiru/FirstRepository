@@ -1,0 +1,86 @@
+<mvc:View controllerName="langcassignment.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <App id="app">
+    	<pages>
+        <Page>
+        <content>
+		 <!-- <ComboBox placeholder="choose language" change="onCategory" width="300px"  items="{/motors}" id="input2">
+		                 <items>
+		                 <core:Item key="{name}" text="{name}"></core:Item>
+		                 </items>
+		                 </ComboBox> -->
+						 <!-- <Button text="Lang" press="clickLang"></Button> -->
+    <Select placeholder="Choose language" change="selectionChange">
+					 <items>
+					 <core:Item text="Choose your language" key="l" id="inp4"></core:Item>
+
+					 <core:Item text="English" key="E" id="inp2"></core:Item>
+                     <core:Item text="Kannada"></core:Item>
+					 <core:Item text="Hindi" key="H" id="inp1"></core:Item>
+                     <core:Item text="Telugu" key="T" id="inp3"></core:Item>
+					 </items>
+	</Select> 
+    <!-- TABLE TO STORE DATA -->
+      <Table id="idTable" items="{/cstTab}"
+				growing="true" growingThreshold="5"
+				growingStarted="onGrowingStarted">
+              
+				<columns>
+					<Column>
+						<Text text="{i18n>XTIT_FNAME}" id="fname"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>XLBL_LNAME}"/>
+					</Column>
+                    <Column>
+						<Text text="{i18n>XLBL_EMAIL}"/>
+					</Column>
+                    <Column>
+						<Text text="{i18n>XLBL_CONTACT}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+                            <Text text="{ingrd2}" />
+                            <Text text="{ingrd3}" />
+							<Text text="{ingrd4}" />
+							<Text text="{ingrd5}" />
+						</cells>
+					</ColumnListItem>
+                    <!-- <ColumnListItem>
+						<cells>
+                            <Text text="chiru" />
+                            <Text text="appapogu" />
+							<Text text="chiru@gmail.com" />
+							<Text text="9642746174" />
+						</cells>
+					</ColumnListItem> -->
+				</items>
+			</Table>
+
+              <!-- fORM FOR ADDING NEW DATA -->
+                 <form:SimpleForm editable="true" id="idSimple">
+                 <form:content>
+			    <Label text="{i18n>XTIT_FNAME}" width="50%" id="__label2"></Label>
+                 <Input width="50%" value=""  id="input2"></Input>
+              <Label text="{i18n>XLBL_LNAME}" width="50%" id="__label3"></Label>
+               <Input width="50%" value="" id="input3"></Input>
+			    <Label text="{i18n>XLBL_EMAIL}" width="50%" id="__label4"></Label>
+               <Input width="50%" value=""  id="input4"></Input>
+			    <Label text="{i18n>XLBL_CONTACT}" width="50%" id="__label5"></Label>
+               <Input width="50%" value=""  id="input5"></Input>
+                 <Label></Label>
+               <Button text="{i18n>XBUT_SUBMIT}" press="onClick" width="50%"></Button>
+               </form:content>
+                </form:SimpleForm>
+               </content>
+                </Page>
+                </pages>
+              
+    </App>
+</mvc:View>

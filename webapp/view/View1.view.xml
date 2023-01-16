@@ -1,0 +1,63 @@
+<mvc:View controllerName="langcassignment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+    		  <!-- fORM FOR ADDING NEW DATA -->
+                 <f:SimpleForm editable="true" id="idSimple">
+                 <f:content>
+				 <!-- <Title text="ADD-NEW-DATA" align="center"></Title> -->
+             
+                <Label text="PRODUCT-NAME" width="50%" id="__label1"></Label>
+               <Input width="50%" value=""  id="input1" ></Input>
+			    <Label text="INGREDIENT1" width="50%" id="__label2"></Label>
+                 <Input width="50%" value=""  id="input2"></Input>
+              <Label text="INGREDIENT2" width="50%" id="__label3"></Label>
+               <Input width="50%" value="" id="input3"></Input>
+			    <Label text="INGREDIENT3" width="50%" id="__label4"></Label>
+               <Input width="50%" value=""  id="input4"></Input>
+			    <Label text="INGREDIENT4" width="50%" id="__label5"></Label>
+               <Input width="50%" value=""  id="input5"></Input>
+                 <Label></Label>
+               <Button text="Submit" press="onClick" width="50%"></Button>
+               </f:content>
+                </f:SimpleForm>
+    <!-- TABLE TO STORE DATA -->
+      <Table id="table" items=""
+				growing="true" growingThreshold="20"
+				growingStarted="onGrowingStarted">
+              
+				<columns>
+					<Column>
+						<Text text="FIRSTNAME"/>
+					</Column>
+					<Column>
+						<Text text="LASTNAME"/>
+					</Column>
+                    <Column>
+						<Text text="EMAIL"/>
+					</Column>
+                    <Column>
+						<Text text="CONTACT"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+                            <Text text="ram" />
+                            <Text text="appapogu" />
+							<Text text="ram@gmail.com" />
+							<Text text="8790872427" />
+						</cells>
+					</ColumnListItem>
+                    <ColumnListItem>
+						<cells>
+                            <Text text="chiru" />
+                            <Text text="appapogu" />
+							<Text text="chiru@gmail.com" />
+							<Text text="9642746174" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+    </App>
+</mvc:View>
